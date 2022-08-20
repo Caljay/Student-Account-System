@@ -12,7 +12,7 @@
       studentName.middleInitial = _middleInitial;
       studentName.lastName = _lastName;
 
-      SetPassword();
+      //SetPassword();
   
 
 }
@@ -45,4 +45,19 @@
 
 
       exit(1);
+ }
+ void Student::AddCourses() {
+      
+      throw "NotImplementExceptionError";
+      
+      Course tmpCourse;
+      tmpCourse.className = "Class 101";
+
+  
+      allCourses[0] =  tmpCourse;
+      free(&tmpCourse);
+      int amountInArray;
+      amountInArray = sizeof(Course);
+      int lengthOfArray = sizeof(Student::allCourses) / amountInArray;
+
  }

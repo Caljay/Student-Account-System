@@ -1,5 +1,8 @@
 #pragma once
 #include "string"
+
+
+
 using namespace std;
 /*
 
@@ -16,6 +19,22 @@ current classes + grades
 
 
 */
+struct Course {
+
+     string className;
+     char courseCode[6];
+
+     float grade;
+     char letterGrade;
+
+     bool pass;
+     bool inProgress;
+
+
+
+
+};
+
 struct Name {
 
      string firstName;
@@ -24,20 +43,21 @@ struct Name {
 
 
 };
-struct Class {
 
-};
 class Student
 {
 
-     int id;
+     string id;
      string password;
 
 public:
-     Class myClass;
+     Course myClass;
      Name studentName;
+private:
+     Course allCourses[4];
 
-     //name uses structs?
+
+
 
      
 
@@ -47,6 +67,7 @@ public:
      
      //set password, possibly only 1 time use
      void SetPassword();
+     void AddCourses();
     
 
 
